@@ -65,3 +65,28 @@ li a:hover {
     background-color:indianred;
     color:white;
 }
+
+body{
+    margin: 0%;
+    padding: 0;
+    background: #313131;
+}
+
+.slider{
+    width: 1000px;
+    height: 500px;
+    background: url(donateee.jpg)
+    marginL 100px auto;
+    animation: slide 20s infinite;
+}
+@keyframes slide{
+    25%{
+        background: url(donateee.jpg);
+    }
+    50%{
+        background: url(hellloooo.jfif);
+        width: 800px; 
+        height: 600px;
+    }
+
+}
