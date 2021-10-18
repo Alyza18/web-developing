@@ -1,92 +1,115 @@
-*{
+
+   
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav{
-    align-items:center;
-    justify-content: space-around;
-    display: flex;
-    min-hight: 8vh;
-    background-color: rgb(255, 240, 242);
-    font-family: 'Bebas Neue', cursive;
-
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px
-   
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #333
-  
-
-}
-
-.nav ul li::after{
-    
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position:absolute;
-    left: 0;
-    bottom: -10px;
-}
-
-
-.nav ul li:hover:after{
+main {
     width: 100%;
-
+    height: 100vh;
+    background: url(../Tech/img/pexels-rodnae-productions-6646815.jpg) center no-repeat;
+    opacity: 100%;
+    background-size: cover;
+    padding: 5% 10%;
+    position: relative;
+    background-blend-mode: overlay;
 }
 
-ul{
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+header, section {
+    z-index: 2;
+}
+
+header {
+    width: 100%;
+}
+
+header ol {
     list-style-type: none;
-    margin:0;
-    width: 200px;
-    background-color:rgb(221, 203, 203)
-    
-}
- 
-li a {
-    display:block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration:none ;
-    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-li a:hover {
-    background-color:indianred;
-    color:white;
+header ol li {
+    padding: 0 20px;
 }
 
-body{
-    margin: 0%;
-    padding: 0;
-    background: #313131;
+header ol li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
 }
 
-.slider{
-    width: 1000px;
-    height: 500px;
-    background: url(donateee.jpg)
-    marginL 100px auto;
-    animation: slide 20s infinite;
+header ol li a.active {
+    color: #914040;
+    position: relative;
 }
-@keyframes slide{
-    25%{
-        background: url(donateee.jpg);
-    }
-    50%{
-        background: url(hellloooo.jfif);
-        width: 800px; 
-        height: 600px;
-    }
 
+header ol li a.active::after {
+    content: '';
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 2px solid #000000;
+}
+
+section {
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+}
+
+section h4 {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: .05em  .05em  .05em  rgba(0, 0, 0, 0.3)
+}
+
+section h1 {
+    font-size: 70px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: .05em  .05em  .05em  rgba(0, 0, 0, 0.3)
+}
+
+section h1 span {
+    font-weight: 400;
+    color: #beb85cf5;
+    text-shadow: .05em  .05em  .05em  rgba(0, 0, 0, 0.3)
+}
+
+section button {
+    background-color: #000000;
+    color: #ffffff;(255, 255, 255, 0.8);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-shadow: .05em  .05em  .05em  rgba(0, 0, 0, 0.3)
 }
